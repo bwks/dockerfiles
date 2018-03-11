@@ -1,8 +1,8 @@
 # Alpine image with python2 installed
+# 2018-03-11
 
 FROM alpine:latest
-RUN apk update; \
-    apk add --update python py2-pip; \ 
+RUN apk add --update python2 py2-pip; \ 
     pip install -U setuptools pip
 COPY ./requirements.txt / 
 RUN pip install -r requirements.txt
