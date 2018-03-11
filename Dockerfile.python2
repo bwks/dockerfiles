@@ -3,6 +3,6 @@
 
 FROM alpine:latest
 RUN apk add --update python2 py2-pip; \ 
-    pip install -U setuptools pip
+    pip2 install -U setuptools pip
 COPY ./requirements.txt / 
 RUN pip install -r requirements.txt
