@@ -1,8 +1,8 @@
 # Alpine image with python3 installed
+# 2018-03-11
 
 FROM alpine:latest
-RUN apk update; \
-    apk add --update python3; \ 
+RUN apk add --update python3; \ 
     pip3 install -U setuptools pip
 COPY ./requirements.txt / 
 RUN pip3 install -r requirements.txt
